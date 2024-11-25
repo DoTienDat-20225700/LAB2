@@ -1,0 +1,19 @@
+public class Store {
+	public static final int MAX_NUMBERS_ORDERED = 20;
+	private DigitalVideoDisc itemsOrdered[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
+	private int qtyOrdered = 0;
+	// Method to add a DVD to the store
+    public void addDVD(DigitalVideoDisc dvd) {
+        itemsInStore.add(dvd);
+        System.out.println("The DVD " + dvd.getTitle() + " has been added to the store.");
+    }
+
+    // Method to remove a DVD from the store
+    public void removeDVD(DigitalVideoDisc dvd) {
+        if (itemsInStore.remove(dvd)) { // Directly tries to remove the object
+            System.out.println("The DVD " + dvd.getTitle() + " has been removed from the store.");
+        } else {
+            System.out.println("The DVD " + dvd.getTitle() + " is not found in the store.");
+        }
+    }
+}

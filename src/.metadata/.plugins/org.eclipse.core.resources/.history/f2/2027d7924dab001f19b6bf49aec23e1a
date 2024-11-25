@@ -1,0 +1,94 @@
+
+public class DigitalVideoDisc {
+	private String title;
+	private String category;
+	private String director;
+	private int length;
+	private float cost;
+	
+	//Getters
+	public String getTitle() {
+		return title;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public String getDirector() {
+		return director;
+	}
+	public int getLength() {
+		return length;
+	}
+	public float getCost() {
+		return cost;
+	}
+	
+	// Constructors
+    public DigitalVideoDisc(String title) {
+       super();
+       this.title = title;
+    }
+
+
+   public DigitalVideoDisc(String category, String title, float cost) {
+       super();
+       this.title = title;
+       this.category = category;
+       this.cost = cost;
+   }
+
+   public DigitalVideoDisc(String director, String category, String title, float cost){
+       super();
+       this.title = title;
+       this.category = category;
+       this.cost = cost;
+       this.director = director;
+   }
+
+   public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
+       super();
+       this.title = title;
+       this.category = category;
+       this.director = director;
+       this.length = length;
+       this.cost = cost;
+   }
+   //toString method to display DVD 
+@Override
+public String toString() {
+	return "DigitalVideoDisc [title=" + title + ", category=" + category + ", director=" + director + ", length="
+			+ length + ", cost=" + cost + "]";
+}
+private static int nbDigitalVideoDiscs = 0;
+private int id;
+private String title;
+
+// Constructor
+public DigitalVideoDisc(String title) {
+    this.title = title;
+
+    // Cập nhật số lượng DVD và gán ID duy nhất
+    nbDigitalVideoDiscs++;
+    this.id = nbDigitalVideoDiscs;
+}
+//Getter cho ID
+public int getId() {
+    return id;
+}
+
+// Getter cho số lượng DVD (static)
+public static int getNbDigitalVideoDiscs() {
+    return nbDigitalVideoDiscs;
+}
+   //Setter for title
+public void setTitle(String title) {
+    if (title != null && !title.trim().isEmpty()) {
+        this.title = title;
+    } else {
+        System.out.println("Invalid title. Title cannot be null or empty.");
+    }
+}
+}
+
+
+

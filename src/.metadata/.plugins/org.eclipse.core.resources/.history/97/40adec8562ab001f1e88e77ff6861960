@@ -1,0 +1,21 @@
+package hust.soict.globalict.garbage;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class NoGarbage {
+    public static void main(String[] args) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("largefile.txt"))) {
+            String line;
+            StringBuilder result = new StringBuilder(); // Nối chuỗi hiệu quả
+            while ((line = reader.readLine()) != null) {
+                result.append(line); // Thêm chuỗi vào cùng một đối tượng StringBuilder
+            }
+            System.out.println("Đọc tệp hoàn tất (NoGarbage)");
+        } catch (IOException e) {
+            System.out.println("Lỗi đọc tệp: " + e.getMessage());
+        }
+    }
+}
+

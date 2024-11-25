@@ -1,0 +1,20 @@
+package hust.soict.globalict.garbage;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class GarbageCreator {
+    public static void main(String[] args) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("largefile.txt"))) {
+            String line;
+            String result = ""; // Inefficient String concatenation
+            while ((line = reader.readLine()) != null) {
+                result += line; // Creates new String objects each time
+            }
+            System.out.println("File reading completed (GarbageCreator)");
+        } catch (IOException e) {
+            System.out.println("Error reading file: " + e.getMessage());
+        }
+    }
+}
