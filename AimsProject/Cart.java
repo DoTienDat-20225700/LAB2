@@ -21,7 +21,7 @@ public class Cart {
 	            qtyOrdered++;
 	            System.out.println("The disc " + disc.getTitle() + " has been added.");
 	        } else {
-	            System.out.println("The cart is full. Unable to add the disc " + 					disc.getTitle() + ".");
+	            System.out.println("The cart is full. Unable to add the disc " + disc.getTitle() + ".");
 	            break; 
 	        }
 	    }
@@ -33,7 +33,7 @@ public class Cart {
 	        qtyOrdered++;
 	        System.out.println("The disc " + dvd1.getTitle() + " has been added.");
 	    } else {
-	        System.out.println("The cart is full. Unable to add the disc " + dvd1.getTitle() 		+ ".");
+	        System.out.println("The cart is full. Unable to add the disc " + dvd1.getTitle() + ".");
 	        return; // Exit if no slots available for the first DVD
 	    }
 
@@ -42,7 +42,7 @@ public class Cart {
 	        qtyOrdered++;
 	        System.out.println("The disc " + dvd2.getTitle() + " has been added.");
 	    } else {
-	        System.out.println("The cart is full. Unable to add the disc " + dvd2.getTitle() 		+ ".");
+	        System.out.println("The cart is full. Unable to add the disc " + dvd2.getTitle() + ".");
 	    }
 	}
 
