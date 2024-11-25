@@ -59,5 +59,12 @@ public String toString() {
 	return "DigitalVideoDisc [title=" + title + ", category=" + category + ", director=" + director + ", length="
 			+ length + ", cost=" + cost + "]";
 }
-
+//Setter for title
+	public void setTitle(String title) {
+    if (title != null && !title.trim().isEmpty()) {
+        	this.title = title;
+    	} else {
+    		System.out.println("Invalid title. Title cannot be null or empty.");
+    	}
+	}
 }
