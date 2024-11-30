@@ -1,0 +1,43 @@
+
+public class TestPassingParameter {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		DigitalVideoDisc jungleDVD = new DigitalVideoDisc ("Jungle");
+		DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc ("Cinderella");
+        
+        swap(jungleDVD, cinderellaDVD);
+        
+		System.out.println("jungle dvd title: " + jungleDVD.getTitle()); 
+		System.out.println("cinderella dvd title: " + cinderellaDVD.getTitle());
+		
+		changeTitle(jungleDVD, cinderellaDVD.getTitle() );
+		System.out.println("jungle dvd title: " + jungleDVD.getTitle());
+	}
+
+	public static void swap(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+	    String tempTitle = dvd1.getTitle(); 
+	    dvd1.setTitle(dvd2.getTitle());    
+	    dvd2.setTitle(tempTitle);           
+	}
+	
+		
+		public static void changeTitle(DigitalVideoDisc dvd, String title) { 
+			String oldTitle = dvd.getTitle();
+			dvd.setTitle(title);
+			dvd = new DigitalVideoDisc(oldTitle);
+	}  
+		        DigitalVideoDisc dvd1 = new DigitalVideoDisc("Action", "Jungle", 10.5f);
+		        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Drama", "Cinderella", 12.0f);
+		        DigitalVideoDisc dvd3 = new DigitalVideoDisc("Adventure", "Titanic", 15.0f);
+
+		        // Display information about each DVD
+		        System.out.println(dvd1);
+		        System.out.println(dvd2);
+		        System.out.println(dvd3);
+
+		        // Display the total number of DVDs created
+		        System.out.println("Total DVDs created: " + DigitalVideoDisc.getNbDigitalVideoDiscs());
+		    }
+		}
+
+}
